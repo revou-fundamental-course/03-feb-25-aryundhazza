@@ -1,0 +1,271 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px;
+  padding: 30px;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+textarea {
+  width: 80%;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #00bfe7;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  transition: 0.3s ease-in-out;
+}
+  
+textarea:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 10px rgba(0, 183, 231, 0.5);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+hr {
+  margin: 20px auto;
+  width: 80%;
+  border: 1px solid #00bfe7;
+}
+
+p {
+  font-size: 20px;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  textarea {
+    width: 90%;
+}
+    
+  .primary-btn {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+}
+}
+
+
+.judul {
+  position: relative;
+  color: #00bfe7;
+  padding: 5px;
+}
+.judul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  animation: showRight 2s ease forwards;
+  animation-delay: .1s;
+}
+
+.input {
+    padding: 10px;
+    margin: 20px;
+}
+
+.input_sub {
+    position: relative;
+    padding: 5px;
+  }
+.input_sub::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  animation: showRight 2s ease forwards;
+  animation-delay: .4s;
+}
+
+.pola_btn {
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 5px;
+}
+.pola_btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  animation: showRight 2s ease forwards;
+  animation-delay: .7s;
+  z-index: 2;
+}
+
+.hasil {
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.hasil::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  animation: showRight 2s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.method {
+  padding: 10px;
+  margin: 20px;
+}
+
+.cara {
+  position: relative;
+  padding: 5px;
+}
+.cara::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  animation: showRight 2s ease forwards;
+  animation-delay: 2s;
+}
+
+.rumus{
+  position: relative;
+  padding: 5px;   
+}
+.rumus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    animation: showRight 2s ease forwards;
+    animation-delay: 2.8s;
+  }
+
+
+
+
+/* Kalkulator */
+#calculator {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 400px;
+  margin: 50px auto;
+  background-color: #e0f7fa;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px .1px black;
+}
+
+.display {
+  width: 100%;
+  height: 80px;
+  background-color: #0390d2;
+  font-size: 36px;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.buttons button {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  color: #333;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(10px 10px 10px rgb(19, 24, 19));
+  font-weight: bolder;
+}
+
+.operator {
+  background-color: #00bfe7;
+  color: #fff;
+}
+
+
+/* Button Styles */
+.primary-btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Play", sans-serif;
+  padding: 12px 28px;
+  margin: 0.5rem;
+  color: white;
+  background-color: #00bfe7;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 183, 231, 0.3);
+  }
+  
+.primary-btn:hover {
+  background-color: #0077b6;
+  box-shadow: 0 6px 12px rgba(0, 119, 182, 0.4);
+}
+
+ /* Button Hover Effects */
+.primary-btn::before, 
+.primary-btn::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+ 
+.primary-btn:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}

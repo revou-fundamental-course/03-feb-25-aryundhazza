@@ -3,7 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>Calculator Konversi Suhu</title>
+
+    <!-- Google Font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- bagian header -->
+    <header>
+      <div>
+        <h1 class="judul">Calculator Konversi</h1>
+      </div>
+    </header>
+
+    <!-- bagian calculator -->
+    <section id="input-section">
+      <div class="input">
+        <h2 class="input_sub">Masukkan suhu derajat Celsius (°C):</h2>
+
+        <!-- Calculator -->
+        <div>
+          <div id="calculator" style="display: none">
+            <div class="display">0</div>
+            <div class="buttons">
+              <button class="operator" value="clear">C</button>
+              <button class="operator" value="backspace">←</button>
+              <button class="operator" value="%">%</button>
+              <button class="operator" value="/">÷</button>
+              <button value="7">7</button>
+              <button value="8">8</button>
+              <button value="9">9</button>
+              <button class="operator" value="*">×</button>
+              <button value="4">4</button>
+              <button value="5">5</button>
+              <button value="6">6</button>
+              <button class="operator" value="-">-</button>
+              <button value="1">1</button>
+              <button value="2">2</button>
+              <button value="3">3</button>
+              <button class="operator" value="+">+</button>
+              <button class="operator" value="+/-">±</button>
+              <button value="0">0</button>
+              <button class="operator" value=".">.</button>
+              <button class="operator" value="=">=</button>
+              <button class="operator" value="c_to_f">°C → °F</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bagian tombol konversi -->
+        <div class="pola_btn">
+          <button class="primary-btn" onclick="resetFields()">Reset</button>
+          <button id="openModalBtn" class="primary-btn">Kalkulator</button>
+          <button class="primary-btn" onclick="reverseConversion()">
+            Reverse
+          </button>
+        </div>
+
+        <div class="hasil">
+          <!-- Bagian hasil konversi -->
+          <h3>Fahrenheit (°F):</h3>
+          <div class="result-container">
+            <textarea id="fahrenheit" readonly></textarea>
+          </div>
+
+          <!-- Bagian cara kalkulasi -->
+          <h3>Cara Kalkulasi:</h3>
+          <div class="calculation-container">
+            <textarea id="calculation" readonly></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Bagian rumus konversi -->
+    <section id="conversion-method-section">
+      <div class="method">
+        <h2 class="cara">Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</h2>
+
+        <div class="rumus">
+          <p>
+            Suhu <b><i>S</i></b> dalam derajat Fahrenheit (°F) sama dengan suhu
+            <b><i>S</i></b> dalam derajat Celsius (°C) kali 9/5 tambah 32.
+          </p>
+
+          <p>
+            <i>S</i> <sub>(°F)</sub> = (<i>S</i> <sub>(°C)</sub> × 9/5) + 32
+          </p>
+
+          <p>atau</p>
+
+          <p>
+            <i>S</i> <sub>(°F)</sub> = (<i>S</i> <sub>(°C)</sub> × 1.8) + 32
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
